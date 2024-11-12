@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Roaster</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Roaster</h1>
+        <p class="subtitle">Enter a GitHub username and repo to get a feedback roast based on your coding habits</p>
+        <form method="POST">
+            <div class="input-group">
+                <input type="text" name="username" placeholder="Enter GitHub username" required> <br>
+                <input type="text" name="repo" placeholder="Enter a repo" required>
+                <button type="submit">Roast Me!</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your GitHub Roast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <div class="content-grid">
+            <div class="roast-section">
+                <h2>Your Feedback! 🔥</h2>
+                <div class="roast-card">
+                    {{ roast | safe }}
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <h2>Your Language Choices... Really? 🤨</h2>
+                <div class="chart-container">
+                    <canvas id="languagesChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <a href="/" class="back-button">Roast Another Repo 🎯</a>
+    </div>
+
+    {% if languages %}
+        <script>
+            const languagesData = JSON.parse('{{ languages|tojson|safe }}');
+            new Chart(document.getElementById('languagesChart'), {
+            type: 'pie',
+            data: {
+                labels: Object.keys(languagesData),
+                datasets: [{
+                    data: Object.values(languagesData),
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Language Distribution'
+                }
+            }
+        });
+        </script>
+    {% endif %} 
+</body>
+</html>
