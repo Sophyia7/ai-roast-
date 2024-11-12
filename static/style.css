@@ -1,0 +1,144 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;    /* This centers the container horizontally */
+  margin-top: 2rem;  /* Adds some space from the top of the page */
+}
+
+
+h1 {
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+h2{
+  text-align: center;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  padding: 12px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.card{
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0, 0.1);
+  max-width: 500px;
+}
+
+.roast-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.languages-card{
+  min-height: 400px;
+}
+
+
+
+.back-button{
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}
+
+
+
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.roast-section, .stats-section {
+  background: white;
+  padding: 1.5rem;  /* Reduced from 2rem */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 400px;  /* Add a max height */
+  overflow-y: auto;   /* Add scrolling if content exceeds max height */
+}
+.roast-card {
+  height: calc(100% - 3rem); /* Subtracts height of heading to maintain equal section heights */
+  overflow-y: auto; /* Adds scroll if content is too long */
+}
+
+.chart-container {
+  /* height: calc(100% - 3rem); */
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
