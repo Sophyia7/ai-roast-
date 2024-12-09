@@ -67,7 +67,6 @@ def index():
             messages=[
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.7,
             max_tokens=512,
             top_p=0.9
         )
